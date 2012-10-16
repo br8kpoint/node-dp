@@ -1,0 +1,17 @@
+{
+  "name": "node-dp",
+  "version": "0.0.1",
+  "description": "A nodejs module for communicating with donor perfect via the api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "donor",
+    "perfect",
+    "api"
+  ],
+  "author": "Mike Fair",
+  "license": "BSD"
+}
