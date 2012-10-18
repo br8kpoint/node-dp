@@ -8,10 +8,12 @@
   },
   "repository": "",
   "keywords": [
-    "donor",
-    "perfect",
+    "donor perfect",
     "api"
   ],
+  "dependencies" : {
+    "sax" : ">=0.1.1"
+  },
   "author": "Mike Fair",
   "license": "BSD"
 }
