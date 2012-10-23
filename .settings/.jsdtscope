@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry excluding="node_modules/form-data/node_modules/async/dist/|node_modules/form-data/node_modules/combined-stream/test/integration/|node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/lib/|node_modules/form-data/test/integration/|node_modules/form-data/test/|tests/ssl/ca/|node_modules/form-data/node_modules/combined-stream/test/|node_modules/form-data/node_modules/combined-stream/lib/|node_modules/form-data/lib/|vendor/cookie/|node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/test/integration/|tests/|node_modules/form-data/node_modules/async/test/|node_modules/form-data/node_modules/async/deps/|node_modules/form-data/node_modules/async/|node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/test/|node_modules/mime/|node_modules/form-data/node_modules/async/lib/" kind="src" path="node_modules/request"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/lib"/>
+	<classpathentry excluding="dist/|test/|deps/|lib/" kind="src" path="node_modules/request/node_modules/form-data/node_modules/async"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/node_modules/async/deps"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/node_modules/async/dist"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/node_modules/async/lib"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/node_modules/async/test"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/node_modules/combined-stream/lib"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/lib"/>
+	<classpathentry excluding="integration/" kind="src" path="node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/test"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/test/integration"/>
+	<classpathentry excluding="integration/" kind="src" path="node_modules/request/node_modules/form-data/node_modules/combined-stream/test"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/node_modules/combined-stream/test/integration"/>
+	<classpathentry excluding="integration/" kind="src" path="node_modules/request/node_modules/form-data/test"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/form-data/test/integration"/>
+	<classpathentry kind="src" path="node_modules/request/node_modules/mime"/>
+	<classpathentry excluding="ssl/ca/" kind="src" path="node_modules/request/tests"/>
+	<classpathentry kind="src" path="node_modules/request/tests/ssl/ca"/>
+	<classpathentry kind="src" path="node_modules/request/vendor/cookie"/>
+	<classpathentry kind="src" path="node_modules/sax/examples"/>
+	<classpathentry kind="src" path="node_modules/sax/lib"/>
+	<classpathentry kind="src" path="node_modules/sax/test"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

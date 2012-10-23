@@ -12,7 +12,9 @@
     "api"
   ],
   "dependencies" : {
-    "sax" : ">=0.1.1"
+    "sax": "0.3.x",
+    "request": "2.11.x",
+    "validator": "0.4.x"
   },
   "author": "Mike Fair",
   "license": "BSD"
