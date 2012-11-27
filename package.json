@@ -2,7 +2,7 @@
   "name": "node-dp",
   "version": "0.0.1",
   "description": "A nodejs module for communicating with donor perfect via the api.",
-  "main": "index.js",
+  "main": "./lib/node-dp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +14,9 @@
   "dependencies" : {
     "sax": "0.3.x",
     "request": "2.11.x",
-    "validator": "0.4.x"
+    "validator": "0.4.x",
+    "dateformat": "*",
+    "date-utils": "latest"
   },
   "author": "Mike Fair",
   "license": "BSD"
