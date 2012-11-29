@@ -37,7 +37,7 @@ describe('Donor', function(){
 	describe('Query()', function(){
 		// test Donor.query menthod
 		
-		it('should return an array when passed criteria', function(done){
+		it('should return an object with results when passed criteria', function(done){
 			// dp.gifts > 3
 			var options = {
 				criteria:[{
@@ -50,9 +50,30 @@ describe('Donor', function(){
 				}
 				]
 			}
-			nodedp.donor.query(options, function(donors){
+			nodedp.donor.query(options, function(err, donors){
 				//console.log(donors)
-				assert.ok(donors instanceof Array);
+				assert.ok(donors.results instanceof Array);
+				done();
+			});
+		});
+
+		it('should quote values when required', function(done){
+			// dp.gifts > 3
+			var options = {
+				criteria:[{
+					opperand: "=",
+					value: "nodedp",
+					field: {
+						source: "dp",
+						name: "first_name",
+						type: 'varchar'
+					}
+				}
+				]
+			}
+			nodedp.donor.query(options, function(err, donors){
+				//console.log(donors)
+				assert.ok(donors.results instanceof Array);
 				done();
 			});
 		});
@@ -64,9 +85,9 @@ describe('Donor', function(){
 				limit: 10,
 				offset: 1
 			}
-			nodedp.donor.query(options, function(donors){
-				//console.log(donors)
-				assert.ok(donors.length === 10);
+			nodedp.donor.query(options, function(err, donors){
+				console.log(donors)
+				assert.ok(donors.results.length === 10);
 				done();
 			});
 		});
@@ -79,21 +100,20 @@ describe('Donor', function(){
 		// test three methods of get
 		it('should return an object when passed an integer', function(done){
 			console.log('before donor')
-			nodedp.donor.get(1, function(donor){
-				console.log('got donor')
+			nodedp.donor.get(1, function(err, donor){
 				assert.equal(donor.donor_id, 1);
 				done();
 			});
 		});
 		it('should return an array when passed a string', function(done){
-			nodedp.donor.get("select * from dp where donor_id = 5", function(donors){
+			nodedp.donor.get("select * from dp where donor_id = 5", function(err, donors){
 				assert.ok(donors instanceof Array);
 				done();
 			});
 		});
 		it('should return an array when passed an array',function(done){
 			var ids = [1,2,3,4,6];
-			nodedp.donor.get(ids, function(donors){
+			nodedp.donor.get(ids, function(err, donors){
 				assert.ok(donors instanceof Array);
 				assert.equal(donors.length, 5);
 				done();
