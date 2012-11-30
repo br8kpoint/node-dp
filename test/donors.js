@@ -57,6 +57,95 @@ describe('Donor', function(){
 			});
 		});
 
+		it('should return an object with results when passed CONAINS query', function(done){
+			// dp.gifts > 3
+			var options = {
+				criteria:[{
+					opperand: "LIKE",
+					value: "node-dp",
+					field: {
+						source: "dp",
+						name: "first_name",
+						type: "varchar"
+					}
+				}
+				]
+			}
+			nodedp.donor.query(options, function(err, donors){
+				//console.log(donors)
+				assert.ok(donors.results instanceof Array);
+				assert.equal(options.criteria[0].value, "%node-dp%")
+				done();
+			});
+		});
+
+		it('should return an object with results when passed NOT CONAINS query', function(done){
+			// dp.gifts > 3
+			var options = {
+				criteria:[{
+					opperand: "NOT LIKE",
+					value: "node-dp",
+					field: {
+						source: "dp",
+						name: "first_name",
+						type: "varchar"
+					}
+				}
+				]
+			}
+			nodedp.donor.query(options, function(err, donors){
+				//console.log(donors)
+				assert.ok(donors.results instanceof Array);
+				assert.equal(options.criteria[0].value, "%node-dp%")
+				done();
+			});
+		});
+
+		it('should return an object with results when passed STARTSWITH query', function(done){
+			// dp.gifts > 3
+			var options = {
+				criteria:[{
+					opperand: "STARTSWITH",
+					value: "node-dp",
+					field: {
+						source: "dp",
+						name: "first_name",
+						type: "varchar"
+					}
+				}
+				]
+			}
+			nodedp.donor.query(options, function(err, donors){
+				//console.log(donors)
+				assert.ok(donors.results instanceof Array);
+				assert.equal(options.criteria[0].value, "node-dp%")
+				assert.equal(options.criteria[0].opperand, "LIKE")
+				done();
+			});
+		});
+		it('should return an object with results when passed ENDSWITH query', function(done){
+			// dp.gifts > 3
+			var options = {
+				criteria:[{
+					opperand: "ENDSWITH",
+					value: "node-dp",
+					field: {
+						source: "dp",
+						name: "first_name",
+						type: "varchar"
+					}
+				}
+				]
+			}
+			nodedp.donor.query(options, function(err, donors){
+				//console.log(donors)
+				assert.ok(donors.results instanceof Array);
+				assert.equal(options.criteria[0].value, "%node-dp")
+				assert.equal(options.criteria[0].opperand, "LIKE")
+				done();
+			});
+		});
+
 		it('should quote values when required', function(done){
 			// dp.gifts > 3
 			var options = {
