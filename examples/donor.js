@@ -4,6 +4,26 @@ var nodedp = require('../lib/node-dp')
 
 nodedp.credentials.username = 'biblexmladmin'
 nodedp.credentials.password = 'xmladmin'
+
+var options = {
+				criteria:[{
+					opperand: "ENDSWITH",
+					value: "node-dp",
+					field: {
+						source: "dp",
+						name: "first_name",
+						type: "varchar"
+					}
+				},
+				],
+				where: "dpudf.FUNDRAISERS IS NULL",
+				from: ["dpudf"]
+			}
+			nodedp.donor.query(options, function(err, donors){
+				console.log(donors)
+				
+			});
+
 // get a donor by an id
 
 nodedp.donor.get(3695, function(donor){

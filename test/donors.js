@@ -145,7 +145,30 @@ describe('Donor', function(){
 				done();
 			});
 		});
-
+		it('should return an object with results when passed a complex query', function(done){
+			// dp.gifts > 3
+			var options = {
+				criteria:[{
+					opperand: "ENDSWITH",
+					value: "node-dp",
+					field: {
+						source: "dp",
+						name: "first_name",
+						type: "varchar"
+					}
+				},
+				],
+				where: "dpudf.FUNDRAISERS IS NULL",
+				from: ["dpudf"]
+			}
+			nodedp.donor.query(options, function(err, donors){
+				//console.log(donors)
+				assert.ok(donors.results instanceof Array);
+				assert.equal(options.criteria[0].value, "%node-dp")
+				assert.equal(options.criteria[0].opperand, "LIKE")
+				done();
+			});
+		});
 		it('should quote values when required', function(done){
 			// dp.gifts > 3
 			var options = {

@@ -28,14 +28,14 @@ describe('New Contact', function(){
 		it('should return a new id', function(done){
 			var contact = new nodedp.contact();
 			contact.donor_id = donor.donor_id;
-			contact.date = dateutils.today();
-			contact.due_date = dateutils.tomorrow();
+			contact.date = Date.today();
+			contact.due_date = Date.tomorrow();
 			contact.comment = "This is a comment";
 			contact.activity_code = "SOMECODE";
 			contact.mailing_code = "SOMEMAINGCODE";
 			contact.by_whom = "DAPAPI"
 			contact.save(function(error, result){
-				assert.notEqual(gift.gift_id, 0);
+				assert.notEqual(contact.contact_id, 0);
 				done();		
 			});
 			

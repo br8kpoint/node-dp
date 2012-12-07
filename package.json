@@ -16,7 +16,8 @@
     "request": "2.11.x",
     "validator": "0.4.x",
     "dateformat": "*",
-    "date-utils": "latest"
+    "date-utils": "latest",
+    "squel": "latest"
   },
   "author": "Mike Fair",
   "license": "BSD"
