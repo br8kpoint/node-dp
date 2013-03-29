@@ -1,8 +1,9 @@
 var assert = require ('assert'),
     nodedp = require('../lib/node-dp');
 
-nodedp.credentials.username = 'mfair01'
-nodedp.credentials.password= 'mfair01'
+nodedp.credentials.username = 'mfair02'
+nodedp.credentials.password= 'mfair02'
+nodedp.debug = true;
 
 describe('New Gift', function(){
 	var donor = undefined;
