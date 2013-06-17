@@ -5,10 +5,15 @@ var dateFormat = require('dateformat'),
 // set en-us mask
 
 //dateFormat.masks.en_us = "m/d/yyyy h:MM:ss TT";
+<<<<<<< HEAD
+
+//changed from above on 3/14/2013 because dp can't handle time
+dateFormat.masks.en_us = "m/d/yyyy";
+=======
+>>>>>>> 61a37de844d7fac6760dfa80c65e8aa417b5cfab
 
 //changed above on 03/14/2013 because dp can't handle times in date
 dateFormat.masks.en_us = "m/d/yyyy";
-
 /********************************************************************************************************************************
 *
 * Utilities
@@ -31,7 +36,7 @@ function dpURI(action, params){
                 strParams += params[i] + ",";
                 break;
             default:
-                if(params[i] === null || params[i] === undefined) strParams += "null,"             // param is null
+                if(params[i] === null) strParams += "null,"             // param is null
                 else if (params[i] instanceof Date) strParams += "'" + dateFormat(params[i], "en_us") + "',";
                 else strParams += "'" + params[i].toString() + "',"      // try and use toString
 
