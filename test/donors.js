@@ -33,6 +33,29 @@ describe('New Donor', function(){
 	});
 });
 
+describe('UDF', function(){
+	var donor = undefined;
+	describe('Save()', function(){
+		it('should save udf fields', function(done){
+			donor = new nodedp.donor();
+			donor.first_name = 'node-dp'
+			donor.last_name = 'test'
+			donor.email = 'test@test.com'
+			donor.address = 'some address'
+			donor.city = 'some city'
+			donor.state = 'some state'
+			donor.country = 'some country'
+			donor.udfFields.CCEXP = '052017'
+			donor.save(function(error, result){
+				assert.notEqual(donor.donor_id, 0);
+				nodedp.donor.get(donor.donor_id, function(err, retrievedDonor){
+					assert.equal(retrievedDonor.udfFields.CCEXP, '052017')
+					done();	
+				})
+			});
+		})
+	})
+})
 describe('Donor', function(){
 	describe('Query()', function(){
 		// test Donor.query menthod
