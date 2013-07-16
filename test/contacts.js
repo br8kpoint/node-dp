@@ -2,8 +2,8 @@ var assert = require ('assert')
     , nodedp = require('../lib/node-dp')
     , dateutils = require("date-utils")
 
-nodedp.credentials.username = 'mfair01'
-nodedp.credentials.password= 'mfair01'
+nodedp.credentials.username = 'mfair02'
+nodedp.credentials.password= 'mfair02'
 
 describe('New Contact', function(){
 	var donor = undefined;
