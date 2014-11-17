@@ -1,6 +1,6 @@
 {
   "name": "node-dp",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A nodejs module for communicating with donor perfect via the api.",
   "main": "./lib/node-dp.js",
   "scripts": {
