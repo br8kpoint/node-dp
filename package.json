@@ -17,7 +17,6 @@
     "validator": "0.4.x",
     "dateformat": "*",
     "date-utils": "latest",
-    "squel": "latest",
     "async": "latest"
   },
   "author": "Mike Fair",
