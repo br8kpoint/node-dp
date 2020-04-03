@@ -15,7 +15,7 @@
     "sax": "1.2.2",
     "request": "2.11.x",
     "moment": "^2.20.1",
-    "validator": "0.4.x",
+    "validator": "13.0.x",
     "dateformat": "*",
     "date-utils": "latest",
     "async": "latest"
