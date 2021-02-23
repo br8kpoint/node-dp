@@ -11,14 +11,16 @@
     "donor perfect",
     "api"
   ],
-  "dependencies" : {
-    "sax": "1.2.2",
-    "request": "2.11.x",
-    "moment": "^2.20.1",
-    "validator": "0.4.x",
-    "dateformat": "*",
+  "dependencies": {
+    "async": "0.9.2",
+    "console-stamp": "0.2.9",
     "date-utils": "latest",
-    "async": "0.9.2"
+    "dateformat": "*",
+    "moment": "^2.20.1",
+    "request": "2.11.x",
+    "sax": "1.2.2",
+    "validator": "0.4.x",
+    "xtend": "^4.0.2"
   },
   "author": "Mike Fair",
   "license": "BSD"
